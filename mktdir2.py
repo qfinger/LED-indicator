@@ -40,10 +40,6 @@ while repeat == "y":
     blue_pilled_population = [[randint(0,7), 7]]
     timeout = time.time() + 60*5
     while True:
-        test = 0
-        if test == 5 or time.time() > timeout:
-            break
-        test = test - 1
         for person in blue_pilled_population:
                 y = person[1]
                 for rgb in wrd_rgb:
@@ -60,4 +56,19 @@ while repeat == "y":
                 blue_pilled_population.append([randint(0,7), 7])
         while len(blue_pilled_population) > 100:
                 blue_pilled_population.pop(0)
+        
+        #test = 0
+        #if test == 5 or time.time() > timeout:
+           # break
+        #test = test - 1
                    
+        timeout_start = time.time()
+
+# timeout variable can be omitted, if you use specific value in the while condition
+        timeout = 5   # [seconds]
+
+        while time.time() < timeout_start + timeout:
+            test = 0
+            if test == 5:
+                break
+            test = test - 1
