@@ -1,0 +1,22 @@
+import urllib
+import time
+
+repeat = "y"
+while repeat == "y":
+    fhand = urllib.urlopen('http://finance.yahoo.com/d/quotes.csv?s=SPY&f=p2')
+    for line in fhand:
+        print line.strip()
+    
+
+    change = line
+    count = 0
+    for letter in change:
+        if letter == "-":
+            count = count + 1
+
+    if count > 0:
+        print 'The market is down.'
+    else:
+        print 'The market is up.'
+    
+    time.sleep(3)
