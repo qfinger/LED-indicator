@@ -23,24 +23,24 @@ while repeat == "y":
 
 #unicorn hat matrix color change based on market direction
 
-import unicornhat as unicorn
-from random import randint
-import time
+    import unicornhat as unicorn
+    from random import randint
+    import time
 
-unicorn.brightness(0.20)
-unicorn.rotation(90)
+    unicorn.brightness(0.20)
+    unicorn.rotation(90)
 
-if count < 1:
-    wrd_rgb = [[154, 173, 154], [0, 255, 0], [0, 200, 0], [0, 162, 0], [0, 145, 0], [0, 96, 0], [0, 74, 0], [0, 0, 0,]]
-else:
-    wrd_rgb = [[255, 173, 154], [255, 0, 0], [200, 0, 0], [162, 0, 0], [145, 0, 0], [96, 0, 0], [74, 0, 0], [0, 0, 0,]]
+    if count < 1:
+        wrd_rgb = [[154, 173, 154], [0, 255, 0], [0, 200, 0], [0, 162, 0], [0, 145, 0], [0, 96, 0], [0, 74, 0], [0, 0, 0,]]
+    else:
+        wrd_rgb = [[255, 173, 154], [255, 0, 0], [200, 0, 0], [162, 0, 0], [145, 0, 0], [96, 0, 0], [74, 0, 0], [0, 0, 0,]]
 
-clock = 0
+    clock = 0
 
-blue_pilled_population = [[randint(0,7), 7]]
-timeout = time.time() + 60*5
-while True:
-test = 0
+    blue_pilled_population = [[randint(0,7), 7]]
+    timeout = time.time() + 60*5
+    while True:
+        test = 0
         if test == 5 or time.time() > timeout:
             break
         test = test - 1
