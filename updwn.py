@@ -6,11 +6,6 @@ repeat = "y"
 while repeat == "y":
     fhand = urllib.urlopen('http://finance.yahoo.com/d/quotes.csv?s=SPY&f=p2')
     for line in fhand:
-    
-    
-
-
-    #Replace it with this loop
         nums = len(line)
         numline = line [1:nums - 3]  #-newline, quotation mark and percent sign
         numfloat = float(numline)
@@ -33,6 +28,7 @@ while repeat == "y":
     from random import randint
     import time
 
+    #tie LED brightness to change magnitude here
     unicorn.brightness(0.30)
     unicorn.rotation(90)
 
