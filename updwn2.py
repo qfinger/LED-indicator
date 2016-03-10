@@ -74,37 +74,7 @@ while repeat == "y":
                 blue_pilled_population.pop(0)
    
     #end of unicorn loop
-    #playing around with time
-    
-"""
-    print ""
-    localtime = time.asctime( time.localtime(time.time()) )
-    print "Local current time :", localtime
-    print ""
-    """
-    
-    #Timer: Schedule something to happen at a certain time (e.g., 1:00 a.m.)
-    #research this more for market open and close
-"""
-    from datetime import datetime
-    from threading import Timer
 
-    x=datetime.today()
-    y=x.replace(day=x.day+1, hour=1, minute=0, second=0, microsecond=0)
-    delta_t=y-x
-
-    secs=delta_t.seconds+1
-
-    def hello_world():
-        print "hello world"
-        #...
-
-    t = Timer(secs, hello_world)
-    t.start()"""
-    
-    
- 
-      
       # NEXT STEPS: reverse direction depending on up or down
       #Also consider flashing a rainbow or sprite when market changes direction
       #Also consider indicating magnitude of up or down with speed or brightness
